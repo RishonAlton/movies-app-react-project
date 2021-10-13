@@ -12,7 +12,12 @@ const Hero = () => {
         return <Loading />
     }
 
-    const movie = movies.results[0]
+    const movie = movies && movies.results[0]
+
+    if(!movie) {
+        return <Wrapper style={{ background: "#000" }} />
+    }
+        
     const { title, overview, backdrop_path } = movie 
 
     return (

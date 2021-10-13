@@ -47,25 +47,33 @@ const MovieInfo = () => {
                         <p>{overview}</p>
                         <div className="more-info">
                             <div>
-                                <h5 className="rating-title">Rating</h5>
-                                <h5>Director</h5>
+                                { rating !== 0 && <h5 className="rating-title">Rating</h5> }
+                                { crew.length > 0 && <h5>Director</h5> }
                             </div>
                             <div>
-                                <span className="rating">
-                                    <h5>{rating}</h5>
-                                </span>
-                                <p className="director">
-                                    {
-                                        crew.map(person => person.job === "Director" && person.name)
-                                    }
-                                </p>
+                                {
+                                    rating !== 0 && (
+                                        <span className="rating">
+                                            <h5>{rating}</h5>
+                                        </span>
+                                    )
+                                }
+                                {
+                                    crew.length > 0 && (
+                                        <p className="director">
+                                            {
+                                                crew.map(person => person.job === "Director" && person.name)
+                                            }
+                                        </p>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
                 </article>
             </section>
             <MovieDetails { ...movieInfo } />
-            <Actors { ...creditInfo } />
+            { creditInfo.cast.length > 0 &&  <Actors { ...creditInfo } /> }
         </Wrapper>
     )
 

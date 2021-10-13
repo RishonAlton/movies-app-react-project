@@ -8,15 +8,27 @@ const MovieDetails = ({ runtime, budget, revenue }) => {
     return (
         <Wrapper>
             <article className="section">
-                <div>
-                    Running time: { formatTime(runtime) }
-                </div>
-                <div>
-                    Budget: { formatPrice(budget) }
-                </div>
-                <div>
-                    Revenue: { formatPrice(revenue) }
-                </div>
+                {
+                    runtime !== 0 && (
+                        <div>
+                            Running time: { formatTime(runtime) }
+                        </div>
+                    )
+                }
+                {
+                    budget !== 0 && (
+                        <div>
+                            Budget: { formatPrice(budget) }
+                        </div>
+                    )
+                }
+                {
+                    revenue !== 0 && (
+                        <div>
+                            Revenue: { formatPrice(revenue) }
+                        </div>
+                    )
+                }
             </article>
         </Wrapper>
     )
