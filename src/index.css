@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+  --light-gray: #eee;
+  --medium-gray: #353535;
+  --dark-gray: #1c1c1c;
+  --black: #222;
+  --white: #fff;
+  --dark-red: hsl(360, 67%, 44%);
+  --light-red: hsl(360, 71%, 66%);
+  --dark-green: hsl(125, 67%, 44%);
+  --light-green: hsl(125, 71%, 66%);
+  --danger-text: hsl(354, 61%, 28%);
+  --danger-background: hsl(355, 70%, 91%);
+  --success-text: hsl(134, 61%, 21%);
+  --success-background: hsl(134, 41%, 88%);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --small-text: 0.8rem;
+  --transition: all 300ms linear;
+  --max-width: 1280px;
+  --fixed-width: 620px;
+  --border-radius: 20px;
+  --letter-spacing: 0.1rem;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Abel', sans-serif;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+  background: var(--white);
+  color: var(--white);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.button {
+  background: var(--dark-gray);
+  color: var(--white);
+  display: block;
+  width: 60vw;
+  max-width: 350px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 0.75rem 2.5rem;
+  border-radius: 2rem;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.button:hover {
+  background: var(--medium-gray);
+}
+
+.section {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+}
+
+@media all and (max-width: 300px) {
+  .button {
+    font-size: 1.25rem;
+    width: max-content;
+  }
+}
